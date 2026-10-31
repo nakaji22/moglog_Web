@@ -1,0 +1,27 @@
+{{define "content"}}
+<h1>食品データベース</h1>
+<p>内蔵の食品データ（{{.V.Count}} 件）を検索できます。値は100gあたりの推定値です。</p>
+<form method="get" action="/foods" class="form form-inline" role="search">
+  <div class="form-part grow">
+    <label for="q">キーワード</label>
+    <input type="search" id="q" name="q" value="{{.V.Query}}" placeholder="例：鮭、ご飯、ヨーグルト">
+  </div>
+  <p><button type="submit" class="btn btn-solid">検索</button></p>
+</form>
+<div class="table-scroll">
+<table class="data-table">
+  <thead><tr><th>食品名</th><th>分類</th><th>kcal</th><th>たんぱく質</th><th>脂質</th><th>炭水化物</th><th>繊維</th><th>塩分</th><th>標準量</th></tr></thead>
+  <tbody>
+  {{range .V.Foods}}
+    <tr>
+      <td>{{.Name}}</td><td>{{.Category}}</td><td>{{kcal .Kcal}}</td><td>{{g1 .Protein}}</td>
+      <td>{{g1 .Fat}}</td><td>{{g1 .Carbs}}</td><td>{{g1 .Fiber}}</td><td>{{g1 .Salt}}</td><td>{{g1 .DefaultGrams}} g</td>
+    </tr>
+  {{else}}
+    <tr><td colspan="9">該当する食品が見つかりませんでした。</td></tr>
+  {{end}}
+  </tbody>
+</table>
+</div>
+<p class="support-text">出典：文部科学省「日本食品標準成分表」の代表値をもとにした概数です。調理条件により実際の値とは差が生じます。</p>
+{{end}}

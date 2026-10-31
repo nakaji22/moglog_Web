@@ -1,0 +1,7 @@
+# ローカル実行時のデータ（SQLite・アップロード写真）
+data/
+# ビルド成果物
+/moglog-web
+*.exe
+# その他
+.DS_Store

@@ -1,0 +1,86 @@
+{{define "content"}}
+<h1>{{dateJP .V.Date}}の記録</h1>
+
+{{if not .V.HasProfile}}
+<div class="notice notice-info">
+  <p>まだプロフィールが設定されていません。身長・体重などを設定すると、推奨カロリーとPFC目標が表示されます。</p>
+  <p><a class="btn btn-solid btn-small" href="/settings">プロフィールを設定する</a></p>
+</div>
+{{end}}
+
+<section class="card summary-card">
+  <div class="summary-main">
+    <p class="summary-label">今日の摂取カロリー</p>
+    <p class="summary-kcal"><strong>{{kcal .V.Totals.Kcal}}</strong> <span class="unit">kcal</span> <span class="summary-goal">/ 目標 {{kcal .V.GoalKcal}} kcal</span></p>
+    <div class="bar" role="img" aria-label="目標に対する摂取割合 {{printf "%.0f" (pctRaw .V.Totals.Kcal .V.GoalKcal)}}%">
+      <span style="width: {{printf "%.1f" (pct .V.Totals.Kcal .V.GoalKcal)}}%"></span>
+    </div>
+    {{if gt .V.Remaining 0.0}}
+    <p>あと <strong>{{kcal .V.Remaining}} kcal</strong> 食べられます。</p>
+    {{else}}
+    <p>目標を <strong>{{kcal .V.RemainingAbs}} kcal</strong> 超えています。</p>
+    {{end}}
+  </div>
+  <div class="pfc-grid">
+    <div>
+      <p class="pfc-label">たんぱく質</p>
+      <p>{{g1 .V.Totals.Protein}} g / {{g1 .V.PFC.Protein}} g</p>
+      <div class="bar bar-small"><span style="width: {{printf "%.1f" (pct .V.Totals.Protein .V.PFC.Protein)}}%"></span></div>
+    </div>
+    <div>
+      <p class="pfc-label">脂質</p>
+      <p>{{g1 .V.Totals.Fat}} g / {{g1 .V.PFC.Fat}} g</p>
+      <div class="bar bar-small"><span style="width: {{printf "%.1f" (pct .V.Totals.Fat .V.PFC.Fat)}}%"></span></div>
+    </div>
+    <div>
+      <p class="pfc-label">炭水化物</p>
+      <p>{{g1 .V.Totals.Carbs}} g / {{g1 .V.PFC.Carbs}} g</p>
+      <div class="bar bar-small"><span style="width: {{printf "%.1f" (pct .V.Totals.Carbs .V.PFC.Carbs)}}%"></span></div>
+    </div>
+    <div>
+      <p class="pfc-label">食物繊維 / 食塩相当量</p>
+      <p>{{g1 .V.Totals.Fiber}} g / {{g1 .V.Totals.Salt}} g</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>直近7日</h2>
+  <div class="week-bars">
+    {{range .V.Week}}
+    <a class="week-bar{{if .IsToday}} is-today{{end}}" href="/history/{{.Date}}">
+      <span class="week-bar-fill" style="height: {{printf "%.0f" .Pct}}%"></span>
+      <span class="week-bar-day">{{.Day}}</span>
+    </a>
+    {{end}}
+  </div>
+</section>
+
+{{range .V.Groups}}
+<section class="meal-group">
+  <div class="meal-group-head">
+    <h2>{{.Label}}</h2>
+    <span class="meal-group-kcal">{{kcal .Subtotal.Kcal}} kcal</span>
+    <a class="btn btn-outline btn-small" href="/meals/new?date={{$.V.Date}}&meal_type={{.Type}}">＋ 追加</a>
+  </div>
+  {{if .Meals}}
+    {{range .Meals}}
+    <article class="card meal-card">
+      <div class="meal-card-head">
+        <h3>{{if .Title}}{{.Title}}{{else}}（無題）{{end}}</h3>
+        <span>{{kcal .Totals.Kcal}} kcal</span>
+        <a href="/meals/{{.ID}}/edit">編集</a>
+      </div>
+      {{if .PhotoName}}<p><img class="meal-photo" src="/uploads/{{.PhotoName}}" alt="食事の写真"></p>{{end}}
+      <ul class="meal-items">
+        {{range .Items}}<li>{{.Name}}（{{g1 .Grams}} g）— {{kcal .Nutrients.Kcal}} kcal</li>{{end}}
+      </ul>
+      {{if .Note}}<p class="meal-note">{{.Note}}</p>{{end}}
+    </article>
+    {{end}}
+  {{else}}
+  <p class="empty">まだ記録がありません。</p>
+  {{end}}
+</section>
+{{end}}
+{{end}}

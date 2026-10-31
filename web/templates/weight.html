@@ -1,0 +1,54 @@
+{{define "content"}}
+<h1>体重の記録</h1>
+
+<form method="post" action="/weight" class="form form-inline">
+  <input type="hidden" name="_csrf" value="{{.CSRF}}">
+  <div class="form-part">
+    <label for="wdate">日付<span class="req">※必須</span></label>
+    <input type="date" id="wdate" name="date" value="{{.V.Today}}" required>
+  </div>
+  <div class="form-part">
+    <label for="weight">体重（kg）<span class="req">※必須</span></label>
+    <input type="number" id="weight" name="weight" step="0.1" min="20" max="400" required>
+  </div>
+  <p><button type="submit" class="btn btn-solid">記録する</button></p>
+</form>
+
+{{if .V.Latest}}
+<section class="card">
+  <h2>推移グラフ</h2>
+  <p>最新： <strong>{{g1 .V.Latest.WeightKg}} kg</strong>（{{dateJP .V.Latest.Date}}）
+  {{if .V.HasDiff}}／ 記録開始時（{{g1 .V.StartWeight}} kg）から {{if gt .V.Diff 0.0}}+{{end}}{{g1 .V.Diff}} kg{{end}}</p>
+  <svg class="weight-chart" viewBox="0 0 720 200" role="img" aria-label="体重の推移グラフ">
+    <polyline points="{{.V.Points}}" fill="none" stroke="#0017c1" stroke-width="2.5"></polyline>
+  </svg>
+  <p class="chart-axis"><span>{{.V.FirstDate}}（最大 {{.V.MaxLabel}}）</span><span>{{.V.LastDate}}（最小 {{.V.MinLabel}}）</span></p>
+</section>
+
+<section>
+  <h2>記録一覧</h2>
+  <div class="table-scroll">
+  <table class="data-table">
+    <thead><tr><th>日付</th><th>体重</th><th></th></tr></thead>
+    <tbody>
+    {{range .V.Records}}
+      <tr>
+        <td>{{dateJP .Date}}</td>
+        <td>{{g1 .WeightKg}} kg</td>
+        <td>
+          <form method="post" action="/weight/delete" class="inline-form" onsubmit="return confirm('この体重記録を削除しますか？');">
+            <input type="hidden" name="_csrf" value="{{$.CSRF}}">
+            <input type="hidden" name="date" value="{{.Date}}">
+            <button type="submit" class="btn btn-text btn-small">削除</button>
+          </form>
+        </td>
+      </tr>
+    {{end}}
+    </tbody>
+  </table>
+  </div>
+</section>
+{{else}}
+<p class="empty">まだ体重の記録がありません。上のフォームから記録できます。</p>
+{{end}}
+{{end}}

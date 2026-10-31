@@ -1,0 +1,121 @@
+{{define "content"}}
+<h1>{{if eq .V.Action "/meals"}}食事を記録{{else}}食事を編集{{end}}</h1>
+
+{{if .V.FormError}}<div class="notice notice-error" role="alert">{{.V.FormError}}</div>{{end}}
+
+{{if .V.IsPhoto}}
+<div class="card photo-card">
+  <h2>写真から記録</h2>
+  <p><img class="meal-photo" src="/uploads/{{.V.PhotoName}}" alt="アップロードした食事の写真"></p>
+  <div class="notice notice-info">
+    <p>写真から料理を自動で判定する機能はありません。下の「候補」や食品検索から、写真の内容に合うものを選んでください。量は写真を見ながら調整できます。</p>
+  </div>
+</div>
+{{else}}
+<details class="card">
+  <summary>写真から記録する</summary>
+  <form method="post" action="/photos" enctype="multipart/form-data" class="form">
+    <input type="hidden" name="_csrf" value="{{.CSRF}}">
+    <input type="hidden" name="date" value="{{.V.Date}}">
+    <input type="hidden" name="meal_type" value="{{.V.MealType}}">
+    <div class="form-part">
+      <label for="photo">食事の写真</label>
+      <p class="support-text">JPEG / PNG / WebP / GIF、10MBまで。</p>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+    </div>
+    <p><button type="submit" class="btn btn-outline">写真をアップロード</button></p>
+  </form>
+</details>
+{{end}}
+
+<section class="card">
+  <h2>候補・テンプレート</h2>
+  <p class="support-text">押すと品目に一括入力されます。内容は下の表で修正できます。</p>
+  <div class="chip-list">
+    {{range .V.Templates}}
+    <button type="button" class="chip" data-apply-template="{{.ID}}">{{.Title}}（{{kcal .Kcal}} kcal）</button>
+    {{end}}
+  </div>
+  {{if .V.Frequent}}
+  <h3>よく記録する食品</h3>
+  <div class="chip-list">
+    {{range .V.Frequent}}
+    <button type="button" class="chip" data-add-food="{{.Food.ID}}">{{.Food.Name}}</button>
+    {{end}}
+  </div>
+  {{end}}
+</section>
+
+<form method="post" action="{{.V.Action}}" class="form" id="meal-form">
+  <input type="hidden" name="_csrf" value="{{.CSRF}}">
+  <input type="hidden" name="photo_name" value="{{.V.PhotoName}}">
+  <input type="hidden" name="source" id="source-field" value="{{.V.Source}}">
+
+  <div class="form-row">
+    <div class="form-part">
+      <label for="date">日付<span class="req">※必須</span></label>
+      <input type="date" id="date" name="date" value="{{.V.Date}}" required>
+    </div>
+    <div class="form-part">
+      <label for="meal_type">食事の区分<span class="req">※必須</span></label>
+      <select id="meal_type" name="meal_type">
+        <option value="breakfast" {{if eq .V.MealType "breakfast"}}selected{{end}}>朝食</option>
+        <option value="lunch" {{if eq .V.MealType "lunch"}}selected{{end}}>昼食</option>
+        <option value="dinner" {{if eq .V.MealType "dinner"}}selected{{end}}>夕食</option>
+        <option value="snack" {{if eq .V.MealType "snack"}}selected{{end}}>間食</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-part">
+    <label for="title">タイトル</label>
+    <p class="support-text">空欄の場合は最初の品目名が入ります。</p>
+    <input type="text" id="title" name="title" value="{{.V.Title_}}" maxlength="100">
+  </div>
+
+  <div class="form-part">
+    <label>品目<span class="req">※必須</span></label>
+    <div class="food-search">
+      <input type="search" id="food-search" placeholder="食品を検索（例：ご飯、鮭、納豆）" autocomplete="off" aria-label="食品を検索">
+      <div id="food-results" class="food-results" role="listbox"></div>
+    </div>
+    <div class="table-scroll">
+      <table class="items-table">
+        <thead>
+          <tr><th>品目</th><th>量(g)</th><th>kcal</th><th>たんぱく質</th><th>脂質</th><th>炭水化物</th><th>繊維</th><th>塩分</th><th></th></tr>
+        </thead>
+        <tbody id="items-body"></tbody>
+        <tfoot>
+          <tr class="totals-row">
+            <th>合計</th><th></th>
+            <th id="total-kcal">0</th><th id="total-protein">0</th><th id="total-fat">0</th>
+            <th id="total-carbs">0</th><th id="total-fiber">0</th><th id="total-salt">0</th><th></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p><button type="button" class="btn btn-outline btn-small" id="add-custom">＋ 品目を手入力で追加</button></p>
+  </div>
+
+  <div class="form-part">
+    <label for="note">メモ</label>
+    <textarea id="note" name="note" rows="2" maxlength="500">{{.V.Note}}</textarea>
+  </div>
+
+  <p>
+    <button type="submit" class="btn btn-solid">{{if eq .V.Action "/meals"}}記録する{{else}}保存する{{end}}</button>
+    <a class="btn btn-text" href="/home">キャンセル</a>
+  </p>
+</form>
+
+{{if ne .V.Action "/meals"}}
+<form method="post" action="{{.V.Action}}/delete" class="form danger-zone" onsubmit="return confirm('この記録を削除しますか？');">
+  <input type="hidden" name="_csrf" value="{{.CSRF}}">
+  <button type="submit" class="btn btn-danger-outline">この記録を削除する</button>
+</form>
+{{end}}
+
+<script type="application/json" id="foods-data">{{.V.FoodsJSON}}</script>
+<script type="application/json" id="templates-data">{{.V.TemplatesJSON}}</script>
+<script type="application/json" id="initial-items">{{.V.ItemsJSON}}</script>
+{{end}}

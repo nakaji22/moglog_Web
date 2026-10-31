@@ -1,0 +1,21 @@
+{{define "content"}}
+<h1>新規登録</h1>
+<p>メールアドレスとパスワードでアカウントを作成します。登録後はログインした状態で、ご自身の記録だけにアクセスできます。</p>
+<form method="post" action="/register" class="form">
+  <div class="form-part">
+    <label for="email">メールアドレス<span class="req">※必須</span></label>
+    <input type="email" id="email" name="email" value="{{.V.Email}}" required autocomplete="email">
+  </div>
+  <div class="form-part">
+    <label for="password">パスワード<span class="req">※必須</span></label>
+    <p class="support-text">8文字以上で入力してください。</p>
+    <input type="password" id="password" name="password" required autocomplete="new-password" minlength="8">
+  </div>
+  <div class="form-part">
+    <label for="password_confirm">パスワード（確認）<span class="req">※必須</span></label>
+    <input type="password" id="password_confirm" name="password_confirm" required autocomplete="new-password" minlength="8">
+  </div>
+  <p><button type="submit" class="btn btn-solid">登録する</button></p>
+</form>
+<p>すでにアカウントをお持ちの方は <a href="/login">ログイン</a> へ。</p>
+{{end}}

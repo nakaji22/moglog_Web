@@ -1,0 +1,86 @@
+{{define "content"}}
+<h1>設定</h1>
+
+{{if .V.Welcome}}
+<div class="notice notice-info">
+  <p>登録ありがとうございます。まずはプロフィールを設定してください。身長・体重・活動量から、推奨カロリーとPFC目標を自動で計算します。</p>
+</div>
+{{end}}
+{{if .V.FormError}}<div class="notice notice-error" role="alert">{{.V.FormError}}</div>{{end}}
+
+{{if .V.Rec}}
+<section class="card">
+  <h2>現在の推奨値</h2>
+  <ul class="rec-list">
+    <li>基礎代謝量（BMR）： {{kcal .V.Rec.BMR}} kcal/日</li>
+    <li>推定消費カロリー（TDEE）： {{kcal .V.Rec.TDEE}} kcal/日</li>
+    <li>推奨摂取カロリー： <strong>{{kcal .V.Rec.Kcal}} kcal/日</strong></li>
+    <li>週あたりの体重変化の目安： {{g1 .V.Rec.WeeklyChangeKg}} kg</li>
+  </ul>
+  {{if .V.Rec.ClampedToSafetyFloor}}
+  <div class="notice notice-info"><p>安全のため、推奨摂取カロリーは下限値（男性 1500 kcal / 女性 1200 kcal）に調整されています。極端なカロリー制限は自動では推奨しません。</p></div>
+  {{end}}
+</section>
+{{end}}
+
+<form method="post" action="/settings" class="form">
+  <input type="hidden" name="_csrf" value="{{.CSRF}}">
+  <div class="form-row">
+    <div class="form-part">
+      <label for="age">年齢<span class="req">※必須</span></label>
+      <input type="number" id="age" name="age" min="10" max="120" required value="{{if .V.Profile}}{{.V.Profile.Age}}{{else}}30{{end}}">
+    </div>
+    <div class="form-part">
+      <label>性別<span class="req">※必須</span></label>
+      <div class="radio-row">
+        <label class="radio"><input type="radio" name="sex" value="male" {{if and .V.Profile (eq .V.Profile.Sex "male")}}checked{{end}} {{if not .V.Profile}}checked{{end}}> 男性</label>
+        <label class="radio"><input type="radio" name="sex" value="female" {{if and .V.Profile (eq .V.Profile.Sex "female")}}checked{{end}}> 女性</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-part">
+      <label for="height_cm">身長（cm）<span class="req">※必須</span></label>
+      <input type="number" id="height_cm" name="height_cm" step="0.1" min="100" max="250" required value="{{if .V.Profile}}{{.V.Profile.HeightCm}}{{else}}170{{end}}">
+    </div>
+    <div class="form-part">
+      <label for="weight_kg">現在の体重（kg）<span class="req">※必須</span></label>
+      <input type="number" id="weight_kg" name="weight_kg" step="0.1" min="20" max="400" required value="{{if .V.Profile}}{{.V.Profile.WeightKg}}{{else}}65{{end}}">
+    </div>
+    <div class="form-part">
+      <label for="target_weight_kg">目標体重（kg）</label>
+      <input type="number" id="target_weight_kg" name="target_weight_kg" step="0.1" min="20" max="400" value="{{if .V.Profile}}{{.V.Profile.TargetWeightKg}}{{end}}">
+    </div>
+  </div>
+  <div class="form-part">
+    <label for="activity_level">活動レベル<span class="req">※必須</span></label>
+    <select id="activity_level" name="activity_level">
+      <option value="sedentary" {{if and .V.Profile (eq .V.Profile.ActivityLevel "sedentary")}}selected{{end}}>ほぼ運動しない（デスクワーク中心）</option>
+      <option value="light" {{if and .V.Profile (eq .V.Profile.ActivityLevel "light")}}selected{{end}}>軽い運動（週1〜3回）</option>
+      <option value="moderate" {{if and .V.Profile (eq .V.Profile.ActivityLevel "moderate")}}selected{{end}}>中程度の運動（週3〜5回）</option>
+      <option value="active" {{if and .V.Profile (eq .V.Profile.ActivityLevel "active")}}selected{{end}}>激しい運動（週6〜7回）</option>
+      <option value="very_active" {{if and .V.Profile (eq .V.Profile.ActivityLevel "very_active")}}selected{{end}}>肉体労働・アスリートレベル</option>
+    </select>
+  </div>
+  <div class="form-part">
+    <label for="purpose">目的<span class="req">※必須</span></label>
+    <select id="purpose" name="purpose">
+      <option value="lose" {{if and .V.Profile (eq .V.Profile.Purpose "lose")}}selected{{end}}>減量</option>
+      <option value="maintain" {{if and .V.Profile (eq .V.Profile.Purpose "maintain")}}selected{{end}}>維持</option>
+      <option value="gain" {{if and .V.Profile (eq .V.Profile.Purpose "gain")}}selected{{end}}>増量</option>
+    </select>
+  </div>
+  <div class="form-part">
+    <label for="kcal_goal_override">目標カロリーの上書き（kcal/日）</label>
+    <p class="support-text">空欄の場合は推奨値を使います。500〜10000 kcal。</p>
+    <input type="number" id="kcal_goal_override" name="kcal_goal_override" min="500" max="10000" value="{{.V.OverrideVal}}">
+  </div>
+  <p><button type="submit" class="btn btn-solid">保存する</button></p>
+</form>
+
+<section class="card">
+  <h2>アカウント</h2>
+  <p>ログイン中のメールアドレス： {{.User.Email}}</p>
+  <p><a href="/export.csv">記録データをCSVでダウンロード</a></p>
+</section>
+{{end}}

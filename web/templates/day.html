@@ -1,0 +1,40 @@
+{{define "content"}}
+<p class="breadcrumb"><a href="/history">履歴</a> ＞ {{dateJP .V.Date}}</p>
+<h1>{{dateJP .V.Date}}の記録</h1>
+
+<section class="card summary-card">
+  <p class="summary-label">この日の合計</p>
+  <p class="summary-kcal"><strong>{{kcal .V.Totals.Kcal}}</strong> <span class="unit">kcal</span>
+  {{if .V.HasProfile}}<span class="summary-goal">/ 目標 {{kcal .V.GoalKcal}} kcal</span>{{end}}</p>
+  <p>たんぱく質 {{g1 .V.Totals.Protein}} g ／ 脂質 {{g1 .V.Totals.Fat}} g ／ 炭水化物 {{g1 .V.Totals.Carbs}} g ／ 食物繊維 {{g1 .V.Totals.Fiber}} g ／ 食塩相当量 {{g1 .V.Totals.Salt}} g</p>
+  {{if .V.HasWeight}}<p>体重： {{g1 .V.WeightKg}} kg（<a href="/weight">体重の記録へ</a>）</p>{{end}}
+</section>
+
+<p>
+  <a class="btn btn-solid btn-small" href="/meals/new?date={{.V.Date}}">＋ この日に記録を追加</a>
+</p>
+
+{{range .V.Meals}}
+<article class="card meal-card">
+  <div class="meal-card-head">
+    <h2>{{mealLabel .MealType}}： {{if .Title}}{{.Title}}{{else}}（無題）{{end}}</h2>
+    <span>{{kcal .Totals.Kcal}} kcal</span>
+    <a href="/meals/{{.ID}}/edit">編集</a>
+  </div>
+  {{if .PhotoName}}<p><img class="meal-photo" src="/uploads/{{.PhotoName}}" alt="食事の写真"></p>{{end}}
+  <div class="table-scroll">
+  <table class="data-table">
+    <thead><tr><th>品目</th><th>量(g)</th><th>kcal</th><th>たんぱく質</th><th>脂質</th><th>炭水化物</th></tr></thead>
+    <tbody>
+    {{range .Items}}
+      <tr><td>{{.Name}}</td><td>{{g1 .Grams}}</td><td>{{kcal .Nutrients.Kcal}}</td><td>{{g1 .Nutrients.Protein}}</td><td>{{g1 .Nutrients.Fat}}</td><td>{{g1 .Nutrients.Carbs}}</td></tr>
+    {{end}}
+    </tbody>
+  </table>
+  </div>
+  {{if .Note}}<p class="meal-note">{{.Note}}</p>{{end}}
+</article>
+{{else}}
+<p class="empty">この日の記録はまだありません。</p>
+{{end}}
+{{end}}

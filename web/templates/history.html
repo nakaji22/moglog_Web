@@ -1,0 +1,25 @@
+{{define "content"}}
+<h1>履歴</h1>
+<div class="month-nav">
+  <a class="btn btn-outline btn-small" href="/history?month={{.V.Prev}}">← 前の月</a>
+  <h2>{{.V.MonthLabel}}</h2>
+  <a class="btn btn-outline btn-small" href="/history?month={{.V.Next}}">次の月 →</a>
+</div>
+<p>記録した日数： {{.V.RecordDays}} 日 ／ 1日あたり平均 {{kcal .V.AvgKcal}} kcal</p>
+<div class="table-scroll">
+<table class="data-table">
+  <thead><tr><th>日付</th><th>摂取カロリー</th><th>記録数</th><th></th></tr></thead>
+  <tbody>
+  {{range .V.Days}}
+    <tr>
+      <td>{{.Day}}日（{{.Wday}}）</td>
+      <td>{{if .Has}}{{kcal .Kcal}} kcal{{else}}—{{end}}</td>
+      <td>{{if .Has}}{{.Count}} 件{{else}}—{{end}}</td>
+      <td><a href="/history/{{.Date}}">詳細</a> ／ <a href="/meals/new?date={{.Date}}">追加</a></td>
+    </tr>
+  {{end}}
+  </tbody>
+</table>
+</div>
+<p><a class="btn btn-outline" href="/export.csv">全期間の記録をCSVでダウンロード</a></p>
+{{end}}

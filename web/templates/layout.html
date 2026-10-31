@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{.Title}} | もぐログ</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">もぐログ</a>
+    {{if .User}}
+    <nav class="global-nav" aria-label="メインメニュー">
+      <a href="/home">ホーム</a>
+      <a href="/meals/new">記録する</a>
+      <a href="/history">履歴</a>
+      <a href="/weight">体重</a>
+      <a href="/foods">食品</a>
+      <a href="/settings">設定</a>
+    </nav>
+    <div class="header-user">
+      <span class="header-email">{{.User.Email}}</span>
+      <form method="post" action="/logout" class="inline-form">
+        <input type="hidden" name="_csrf" value="{{.CSRF}}">
+        <button type="submit" class="btn btn-text btn-small">ログアウト</button>
+      </form>
+    </div>
+    {{else}}
+    <nav class="global-nav" aria-label="メインメニュー">
+      <a href="/login">ログイン</a>
+      <a class="btn btn-solid btn-small" href="/register">新規登録</a>
+    </nav>
+    {{end}}
+  </div>
+</header>
+<main class="container main">
+  {{if .Flash}}<div class="notice notice-success" role="status">{{.Flash}}</div>{{end}}
+  {{if .Error}}<div class="notice notice-error" role="alert">{{.Error}}</div>{{end}}
+  {{template "content" .}}
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>もぐログ — 食事の記録と栄養の目安を確認するサービス</p>
+    <p class="footer-note">栄養値は「日本食品標準成分表」の代表値をもとにした推定値です。実際の値とは差が生じる場合があります。健康状態に不安がある場合は、医師や管理栄養士にご相談ください。</p>
+  </div>
+</footer>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

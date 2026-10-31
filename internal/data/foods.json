@@ -1,0 +1,1654 @@
+[
+ {
+  "id": "rice",
+  "name": "ご飯（白米）",
+  "category": "主食",
+  "kcal": 156,
+  "protein": 2.5,
+  "fat": 0.3,
+  "carbs": 37.1,
+  "fiber": 0.3,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "白米",
+   "ライス",
+   "米"
+  ]
+ },
+ {
+  "id": "rice-brown",
+  "name": "玄米ご飯",
+  "category": "主食",
+  "kcal": 152,
+  "protein": 2.8,
+  "fat": 1,
+  "carbs": 35.6,
+  "fiber": 1.4,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "玄米"
+  ]
+ },
+ {
+  "id": "bread",
+  "name": "食パン",
+  "category": "主食",
+  "kcal": 248,
+  "protein": 9.3,
+  "fat": 4.2,
+  "carbs": 46.7,
+  "fiber": 2.3,
+  "salt": 1.2,
+  "defaultGrams": 60,
+  "aliases": [
+   "パン",
+   "トースト"
+  ]
+ },
+ {
+  "id": "udon",
+  "name": "うどん（ゆで）",
+  "category": "主食",
+  "kcal": 95,
+  "protein": 2.6,
+  "fat": 0.4,
+  "carbs": 21.6,
+  "fiber": 0.8,
+  "salt": 0.3,
+  "defaultGrams": 250,
+  "aliases": [
+   "ウドン"
+  ]
+ },
+ {
+  "id": "soba",
+  "name": "そば（ゆで）",
+  "category": "主食",
+  "kcal": 130,
+  "protein": 4.8,
+  "fat": 1,
+  "carbs": 26,
+  "fiber": 1.5,
+  "salt": 0,
+  "defaultGrams": 170,
+  "aliases": [
+   "蕎麦"
+  ]
+ },
+ {
+  "id": "ramen-noodle",
+  "name": "中華めん（ゆで）",
+  "category": "主食",
+  "kcal": 133,
+  "protein": 4.9,
+  "fat": 0.6,
+  "carbs": 29.2,
+  "fiber": 1.3,
+  "salt": 0.2,
+  "defaultGrams": 230,
+  "aliases": [
+   "ラーメン麺",
+   "麺"
+  ]
+ },
+ {
+  "id": "pasta",
+  "name": "スパゲッティ（ゆで）",
+  "category": "主食",
+  "kcal": 150,
+  "protein": 5.8,
+  "fat": 0.9,
+  "carbs": 32.9,
+  "fiber": 1.6,
+  "salt": 0,
+  "defaultGrams": 250,
+  "aliases": [
+   "パスタ"
+  ]
+ },
+ {
+  "id": "mochi",
+  "name": "餅",
+  "category": "主食",
+  "kcal": 223,
+  "protein": 4.2,
+  "fat": 0.8,
+  "carbs": 50.8,
+  "fiber": 0.6,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "もち"
+  ]
+ },
+ {
+  "id": "oatmeal",
+  "name": "オートミール",
+  "category": "主食",
+  "kcal": 350,
+  "protein": 13.7,
+  "fat": 5.7,
+  "carbs": 69.1,
+  "fiber": 9.4,
+  "salt": 0,
+  "defaultGrams": 40,
+  "aliases": []
+ },
+ {
+  "id": "onigiri",
+  "name": "おにぎり（鮭）",
+  "category": "主食",
+  "kcal": 170,
+  "protein": 4,
+  "fat": 1.2,
+  "carbs": 37,
+  "fiber": 0.4,
+  "salt": 0.7,
+  "defaultGrams": 110,
+  "aliases": [
+   "オニギリ"
+  ]
+ },
+ {
+  "id": "fried-rice",
+  "name": "チャーハン",
+  "category": "主食",
+  "kcal": 172,
+  "protein": 4.5,
+  "fat": 6.5,
+  "carbs": 24,
+  "fiber": 0.6,
+  "salt": 1,
+  "defaultGrams": 250,
+  "aliases": [
+   "炒飯"
+  ]
+ },
+ {
+  "id": "porridge",
+  "name": "おかゆ",
+  "category": "主食",
+  "kcal": 65,
+  "protein": 1.1,
+  "fat": 0.1,
+  "carbs": 15,
+  "fiber": 0.1,
+  "salt": 0,
+  "defaultGrams": 250,
+  "aliases": [
+   "粥"
+  ]
+ },
+ {
+  "id": "chicken-breast",
+  "name": "鶏むね肉（皮なし）",
+  "category": "肉類",
+  "kcal": 116,
+  "protein": 23.3,
+  "fat": 1.9,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 120,
+  "aliases": [
+   "鶏肉",
+   "チキン"
+  ]
+ },
+ {
+  "id": "chicken-thigh",
+  "name": "鶏もも肉（皮つき）",
+  "category": "肉類",
+  "kcal": 190,
+  "protein": 17.3,
+  "fat": 12.6,
+  "carbs": 0,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 120,
+  "aliases": [
+   "鶏肉"
+  ]
+ },
+ {
+  "id": "pork-belly",
+  "name": "豚バラ肉",
+  "category": "肉類",
+  "kcal": 366,
+  "protein": 14.2,
+  "fat": 34.6,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "豚肉"
+  ]
+ },
+ {
+  "id": "pork-loin",
+  "name": "豚ロース肉",
+  "category": "肉類",
+  "kcal": 248,
+  "protein": 19.3,
+  "fat": 19.2,
+  "carbs": 0.2,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "豚肉"
+  ]
+ },
+ {
+  "id": "pork-ground",
+  "name": "豚ひき肉",
+  "category": "肉類",
+  "kcal": 221,
+  "protein": 18.6,
+  "fat": 15.8,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "挽肉"
+  ]
+ },
+ {
+  "id": "beef-belly",
+  "name": "牛バラ肉",
+  "category": "肉類",
+  "kcal": 469,
+  "protein": 13.6,
+  "fat": 45.4,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "牛肉"
+  ]
+ },
+ {
+  "id": "beef-lean",
+  "name": "牛もも肉（赤身）",
+  "category": "肉類",
+  "kcal": 175,
+  "protein": 22.5,
+  "fat": 8.4,
+  "carbs": 0.4,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "牛肉",
+   "ステーキ"
+  ]
+ },
+ {
+  "id": "sausage",
+  "name": "ウインナーソーセージ",
+  "category": "肉類",
+  "kcal": 321,
+  "protein": 13.2,
+  "fat": 28.5,
+  "carbs": 3.3,
+  "fiber": 0,
+  "salt": 2,
+  "defaultGrams": 60,
+  "aliases": [
+   "ソーセージ"
+  ]
+ },
+ {
+  "id": "ham",
+  "name": "ロースハム",
+  "category": "肉類",
+  "kcal": 196,
+  "protein": 16.5,
+  "fat": 13.5,
+  "carbs": 2.1,
+  "fiber": 0,
+  "salt": 2.5,
+  "defaultGrams": 40,
+  "aliases": [
+   "ハム"
+  ]
+ },
+ {
+  "id": "bacon",
+  "name": "ベーコン",
+  "category": "肉類",
+  "kcal": 400,
+  "protein": 12.9,
+  "fat": 39.1,
+  "carbs": 0.3,
+  "fiber": 0,
+  "salt": 2.1,
+  "defaultGrams": 40,
+  "aliases": [
+   "ベーコン"
+  ]
+ },
+ {
+  "id": "salmon",
+  "name": "鮭（塩焼き）",
+  "category": "魚介",
+  "kcal": 152,
+  "protein": 24.6,
+  "fat": 5,
+  "carbs": 0.2,
+  "fiber": 0,
+  "salt": 1.4,
+  "defaultGrams": 80,
+  "aliases": [
+   "サーモン",
+   "シャケ"
+  ]
+ },
+ {
+  "id": "mackerel",
+  "name": "さば（塩焼き）",
+  "category": "魚介",
+  "kcal": 282,
+  "protein": 20.5,
+  "fat": 21.5,
+  "carbs": 0.2,
+  "fiber": 0,
+  "salt": 1.1,
+  "defaultGrams": 80,
+  "aliases": [
+   "サバ",
+   "鯖"
+  ]
+ },
+ {
+  "id": "sanma",
+  "name": "さんま（塩焼き）",
+  "category": "魚介",
+  "kcal": 287,
+  "protein": 19,
+  "fat": 22.9,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.8,
+  "defaultGrams": 100,
+  "aliases": [
+   "サンマ",
+   "秋刀魚"
+  ]
+ },
+ {
+  "id": "tuna-sashimi",
+  "name": "まぐろ刺身",
+  "category": "魚介",
+  "kcal": 132,
+  "protein": 26.4,
+  "fat": 1.4,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 80,
+  "aliases": [
+   "マグロ",
+   "刺身"
+  ]
+ },
+ {
+  "id": "salmon-sashimi",
+  "name": "サーモン刺身",
+  "category": "魚介",
+  "kcal": 154,
+  "protein": 20.5,
+  "fat": 7.3,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 80,
+  "aliases": [
+   "刺身"
+  ]
+ },
+ {
+  "id": "shrimp",
+  "name": "えび",
+  "category": "魚介",
+  "kcal": 83,
+  "protein": 18.4,
+  "fat": 0.4,
+  "carbs": 0.3,
+  "fiber": 0,
+  "salt": 0.4,
+  "defaultGrams": 60,
+  "aliases": [
+   "エビ",
+   "海老"
+  ]
+ },
+ {
+  "id": "squid",
+  "name": "いか",
+  "category": "魚介",
+  "kcal": 76,
+  "protein": 15.6,
+  "fat": 0.8,
+  "carbs": 0.5,
+  "fiber": 0,
+  "salt": 0.5,
+  "defaultGrams": 80,
+  "aliases": [
+   "イカ"
+  ]
+ },
+ {
+  "id": "aji-fry",
+  "name": "アジフライ",
+  "category": "魚介",
+  "kcal": 220,
+  "protein": 12,
+  "fat": 13,
+  "carbs": 12,
+  "fiber": 0.6,
+  "salt": 0.6,
+  "defaultGrams": 100,
+  "aliases": [
+   "フライ"
+  ]
+ },
+ {
+  "id": "tuna-can",
+  "name": "ツナ缶（油漬け）",
+  "category": "魚介",
+  "kcal": 267,
+  "protein": 17.7,
+  "fat": 21.4,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0.9,
+  "defaultGrams": 70,
+  "aliases": [
+   "シーチキン"
+  ]
+ },
+ {
+  "id": "shirasu",
+  "name": "しらす干し",
+  "category": "魚介",
+  "kcal": 206,
+  "protein": 40.5,
+  "fat": 3.6,
+  "carbs": 0.5,
+  "fiber": 0,
+  "salt": 6.6,
+  "defaultGrams": 20,
+  "aliases": [
+   "シラス"
+  ]
+ },
+ {
+  "id": "egg",
+  "name": "卵（ゆで卵）",
+  "category": "卵・乳",
+  "kcal": 142,
+  "protein": 12.5,
+  "fat": 10,
+  "carbs": 0.4,
+  "fiber": 0,
+  "salt": 0.4,
+  "defaultGrams": 50,
+  "aliases": [
+   "玉子",
+   "エッグ"
+  ]
+ },
+ {
+  "id": "tamagoyaki",
+  "name": "卵焼き",
+  "category": "卵・乳",
+  "kcal": 143,
+  "protein": 10.7,
+  "fat": 9.6,
+  "carbs": 3.3,
+  "fiber": 0,
+  "salt": 0.6,
+  "defaultGrams": 60,
+  "aliases": [
+   "玉子焼き"
+  ]
+ },
+ {
+  "id": "milk",
+  "name": "牛乳",
+  "category": "卵・乳",
+  "kcal": 61,
+  "protein": 3.3,
+  "fat": 3.8,
+  "carbs": 4.8,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 200,
+  "aliases": [
+   "ミルク"
+  ]
+ },
+ {
+  "id": "yogurt",
+  "name": "ヨーグルト（プレーン）",
+  "category": "卵・乳",
+  "kcal": 56,
+  "protein": 3.6,
+  "fat": 3,
+  "carbs": 4.9,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "cheese",
+  "name": "プロセスチーズ",
+  "category": "卵・乳",
+  "kcal": 313,
+  "protein": 22.7,
+  "fat": 26,
+  "carbs": 1.3,
+  "fiber": 0,
+  "salt": 2.8,
+  "defaultGrams": 20,
+  "aliases": [
+   "チーズ"
+  ]
+ },
+ {
+  "id": "butter",
+  "name": "バター",
+  "category": "卵・乳",
+  "kcal": 700,
+  "protein": 0.6,
+  "fat": 81,
+  "carbs": 0.2,
+  "fiber": 0,
+  "salt": 1.9,
+  "defaultGrams": 10,
+  "aliases": []
+ },
+ {
+  "id": "tofu",
+  "name": "木綿豆腐",
+  "category": "大豆",
+  "kcal": 73,
+  "protein": 6.6,
+  "fat": 4.2,
+  "carbs": 1.6,
+  "fiber": 0.9,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "豆腐"
+  ]
+ },
+ {
+  "id": "tofu-silk",
+  "name": "絹ごし豆腐",
+  "category": "大豆",
+  "kcal": 56,
+  "protein": 4.9,
+  "fat": 3,
+  "carbs": 2,
+  "fiber": 0.3,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "豆腐"
+  ]
+ },
+ {
+  "id": "natto",
+  "name": "納豆",
+  "category": "大豆",
+  "kcal": 190,
+  "protein": 16.5,
+  "fat": 10,
+  "carbs": 12.1,
+  "fiber": 6.7,
+  "salt": 0,
+  "defaultGrams": 45,
+  "aliases": []
+ },
+ {
+  "id": "fried-tofu",
+  "name": "油揚げ",
+  "category": "大豆",
+  "kcal": 410,
+  "protein": 23.4,
+  "fat": 34.4,
+  "carbs": 2.5,
+  "fiber": 1.4,
+  "salt": 0,
+  "defaultGrams": 20,
+  "aliases": []
+ },
+ {
+  "id": "soy-milk",
+  "name": "豆乳（無調整）",
+  "category": "大豆",
+  "kcal": 43,
+  "protein": 3.6,
+  "fat": 2,
+  "carbs": 3.1,
+  "fiber": 0.2,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "edamame",
+  "name": "枝豆",
+  "category": "大豆",
+  "kcal": 125,
+  "protein": 11.7,
+  "fat": 6.1,
+  "carbs": 7.9,
+  "fiber": 5,
+  "salt": 0,
+  "defaultGrams": 80,
+  "aliases": []
+ },
+ {
+  "id": "cabbage",
+  "name": "キャベツ",
+  "category": "野菜",
+  "kcal": 23,
+  "protein": 1.3,
+  "fat": 0.2,
+  "carbs": 5.2,
+  "fiber": 1.8,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "lettuce",
+  "name": "レタス",
+  "category": "野菜",
+  "kcal": 12,
+  "protein": 0.9,
+  "fat": 0.1,
+  "carbs": 2.8,
+  "fiber": 1.1,
+  "salt": 0,
+  "defaultGrams": 60,
+  "aliases": [
+   "サラダ菜"
+  ]
+ },
+ {
+  "id": "tomato",
+  "name": "トマト",
+  "category": "野菜",
+  "kcal": 20,
+  "protein": 0.9,
+  "fat": 0.1,
+  "carbs": 4.7,
+  "fiber": 1,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": []
+ },
+ {
+  "id": "cucumber",
+  "name": "きゅうり",
+  "category": "野菜",
+  "kcal": 13,
+  "protein": 1,
+  "fat": 0.1,
+  "carbs": 3,
+  "fiber": 1.1,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "キュウリ"
+  ]
+ },
+ {
+  "id": "onion",
+  "name": "玉ねぎ",
+  "category": "野菜",
+  "kcal": 33,
+  "protein": 1.2,
+  "fat": 0.1,
+  "carbs": 8.4,
+  "fiber": 1.5,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "タマネギ"
+  ]
+ },
+ {
+  "id": "carrot",
+  "name": "にんじん",
+  "category": "野菜",
+  "kcal": 35,
+  "protein": 0.7,
+  "fat": 0.1,
+  "carbs": 8.7,
+  "fiber": 2.5,
+  "salt": 0.1,
+  "defaultGrams": 80,
+  "aliases": [
+   "人参"
+  ]
+ },
+ {
+  "id": "potato",
+  "name": "じゃがいも",
+  "category": "野菜",
+  "kcal": 59,
+  "protein": 1.8,
+  "fat": 0.1,
+  "carbs": 16.3,
+  "fiber": 2.2,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "ジャガイモ",
+   "ポテト"
+  ]
+ },
+ {
+  "id": "sweet-potato",
+  "name": "さつまいも",
+  "category": "野菜",
+  "kcal": 127,
+  "protein": 1.2,
+  "fat": 0.2,
+  "carbs": 31.9,
+  "fiber": 3.5,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "焼き芋"
+  ]
+ },
+ {
+  "id": "spinach",
+  "name": "ほうれん草",
+  "category": "野菜",
+  "kcal": 18,
+  "protein": 2.2,
+  "fat": 0.4,
+  "carbs": 3.1,
+  "fiber": 2.8,
+  "salt": 0,
+  "defaultGrams": 80,
+  "aliases": []
+ },
+ {
+  "id": "broccoli",
+  "name": "ブロッコリー",
+  "category": "野菜",
+  "kcal": 37,
+  "protein": 5.4,
+  "fat": 0.6,
+  "carbs": 6.7,
+  "fiber": 5.1,
+  "salt": 0,
+  "defaultGrams": 80,
+  "aliases": []
+ },
+ {
+  "id": "bean-sprout",
+  "name": "もやし",
+  "category": "野菜",
+  "kcal": 15,
+  "protein": 1.8,
+  "fat": 0.1,
+  "carbs": 2.6,
+  "fiber": 1.3,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "corn",
+  "name": "とうもろこし",
+  "category": "野菜",
+  "kcal": 92,
+  "protein": 3.6,
+  "fat": 1.7,
+  "carbs": 20.7,
+  "fiber": 3.1,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "コーン"
+  ]
+ },
+ {
+  "id": "pumpkin",
+  "name": "かぼちゃ",
+  "category": "野菜",
+  "kcal": 41,
+  "protein": 1.6,
+  "fat": 0.1,
+  "carbs": 10.9,
+  "fiber": 3.5,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "eggplant",
+  "name": "なす",
+  "category": "野菜",
+  "kcal": 18,
+  "protein": 1,
+  "fat": 0.1,
+  "carbs": 5.1,
+  "fiber": 2.1,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "ナス"
+  ]
+ },
+ {
+  "id": "pepper",
+  "name": "ピーマン",
+  "category": "野菜",
+  "kcal": 20,
+  "protein": 0.9,
+  "fat": 0.2,
+  "carbs": 5.1,
+  "fiber": 2.3,
+  "salt": 0,
+  "defaultGrams": 50,
+  "aliases": []
+ },
+ {
+  "id": "daikon",
+  "name": "大根",
+  "category": "野菜",
+  "kcal": 15,
+  "protein": 0.5,
+  "fat": 0.1,
+  "carbs": 4.1,
+  "fiber": 1.4,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "mushroom-mix",
+  "name": "きのこ類",
+  "category": "野菜",
+  "kcal": 18,
+  "protein": 2.8,
+  "fat": 0.3,
+  "carbs": 3.9,
+  "fiber": 3.3,
+  "salt": 0,
+  "defaultGrams": 80,
+  "aliases": [
+   "しいたけ",
+   "えのき",
+   "しめじ"
+  ]
+ },
+ {
+  "id": "seaweed-salad",
+  "name": "海藻サラダ",
+  "category": "野菜",
+  "kcal": 15,
+  "protein": 1.2,
+  "fat": 0.3,
+  "carbs": 4,
+  "fiber": 3,
+  "salt": 0.7,
+  "defaultGrams": 50,
+  "aliases": [
+   "わかめ",
+   "海藻"
+  ]
+ },
+ {
+  "id": "karaage",
+  "name": "鶏の唐揚げ",
+  "category": "主菜",
+  "kcal": 290,
+  "protein": 17,
+  "fat": 20,
+  "carbs": 10,
+  "fiber": 0.4,
+  "salt": 1.1,
+  "defaultGrams": 120,
+  "aliases": [
+   "唐揚げ",
+   "からあげ"
+  ]
+ },
+ {
+  "id": "hamburg",
+  "name": "ハンバーグ",
+  "category": "主菜",
+  "kcal": 223,
+  "protein": 12.5,
+  "fat": 15,
+  "carbs": 8,
+  "fiber": 0.5,
+  "salt": 1.2,
+  "defaultGrams": 120,
+  "aliases": []
+ },
+ {
+  "id": "gyoza",
+  "name": "餃子（焼き）",
+  "category": "主菜",
+  "kcal": 230,
+  "protein": 8,
+  "fat": 12,
+  "carbs": 20,
+  "fiber": 1,
+  "salt": 1,
+  "defaultGrams": 120,
+  "aliases": [
+   "ギョーザ"
+  ]
+ },
+ {
+  "id": "shogayaki",
+  "name": "豚の生姜焼き",
+  "category": "主菜",
+  "kcal": 250,
+  "protein": 16,
+  "fat": 17,
+  "carbs": 6,
+  "fiber": 0.3,
+  "salt": 1.3,
+  "defaultGrams": 130,
+  "aliases": [
+   "生姜焼き"
+  ]
+ },
+ {
+  "id": "tonkatsu",
+  "name": "とんかつ",
+  "category": "主菜",
+  "kcal": 418,
+  "protein": 15,
+  "fat": 33,
+  "carbs": 13,
+  "fiber": 0.8,
+  "salt": 0.6,
+  "defaultGrams": 120,
+  "aliases": [
+   "トンカツ"
+  ]
+ },
+ {
+  "id": "ebifry",
+  "name": "エビフライ",
+  "category": "主菜",
+  "kcal": 240,
+  "protein": 11,
+  "fat": 14,
+  "carbs": 15,
+  "fiber": 0.7,
+  "salt": 0.7,
+  "defaultGrams": 90,
+  "aliases": []
+ },
+ {
+  "id": "omelette-rice",
+  "name": "オムライス",
+  "category": "主菜",
+  "kcal": 165,
+  "protein": 5.5,
+  "fat": 7.5,
+  "carbs": 19,
+  "fiber": 0.5,
+  "salt": 1.1,
+  "defaultGrams": 300,
+  "aliases": []
+ },
+ {
+  "id": "curry-roux",
+  "name": "カレー（ルウ・具のみ）",
+  "category": "主菜",
+  "kcal": 130,
+  "protein": 4.5,
+  "fat": 7.5,
+  "carbs": 11,
+  "fiber": 1.2,
+  "salt": 1.8,
+  "defaultGrams": 200,
+  "aliases": [
+   "カレールー"
+  ]
+ },
+ {
+  "id": "mabo-tofu",
+  "name": "麻婆豆腐",
+  "category": "主菜",
+  "kcal": 120,
+  "protein": 7,
+  "fat": 7.5,
+  "carbs": 5.5,
+  "fiber": 0.7,
+  "salt": 1.3,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "stir-fry-veg",
+  "name": "野菜炒め",
+  "category": "主菜",
+  "kcal": 90,
+  "protein": 3.5,
+  "fat": 5.5,
+  "carbs": 7,
+  "fiber": 1.8,
+  "salt": 0.9,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "nikujaga",
+  "name": "肉じゃが",
+  "category": "主菜",
+  "kcal": 103,
+  "protein": 4,
+  "fat": 3.5,
+  "carbs": 14,
+  "fiber": 1.3,
+  "salt": 1,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "salad-chicken",
+  "name": "サラダチキン",
+  "category": "主菜",
+  "kcal": 110,
+  "protein": 21,
+  "fat": 2,
+  "carbs": 0.5,
+  "fiber": 0,
+  "salt": 1.1,
+  "defaultGrams": 110,
+  "aliases": []
+ },
+ {
+  "id": "grilled-chicken",
+  "name": "焼き鳥（もも・塩）",
+  "category": "主菜",
+  "kcal": 200,
+  "protein": 18,
+  "fat": 13,
+  "carbs": 1,
+  "fiber": 0,
+  "salt": 1.2,
+  "defaultGrams": 90,
+  "aliases": [
+   "焼鳥"
+  ]
+ },
+ {
+  "id": "sushi-set",
+  "name": "寿司（盛り合わせ）",
+  "category": "主菜",
+  "kcal": 145,
+  "protein": 6.5,
+  "fat": 2,
+  "carbs": 25,
+  "fiber": 0.5,
+  "salt": 0.9,
+  "defaultGrams": 300,
+  "aliases": [
+   "すし"
+  ]
+ },
+ {
+  "id": "pizza",
+  "name": "ピザ（ミックス）",
+  "category": "主菜",
+  "kcal": 270,
+  "protein": 11,
+  "fat": 11,
+  "carbs": 31,
+  "fiber": 1.8,
+  "salt": 1.6,
+  "defaultGrams": 130,
+  "aliases": []
+ },
+ {
+  "id": "hamburger-fastfood",
+  "name": "ハンバーガー",
+  "category": "主菜",
+  "kcal": 256,
+  "protein": 12,
+  "fat": 11,
+  "carbs": 26,
+  "fiber": 1.5,
+  "salt": 1.1,
+  "defaultGrams": 200,
+  "aliases": [
+   "バーガー"
+  ]
+ },
+ {
+  "id": "french-fries",
+  "name": "フライドポテト",
+  "category": "主菜",
+  "kcal": 287,
+  "protein": 3.3,
+  "fat": 14,
+  "carbs": 38,
+  "fiber": 3.4,
+  "salt": 0.7,
+  "defaultGrams": 100,
+  "aliases": [
+   "ポテトフライ"
+  ]
+ },
+ {
+  "id": "miso-soup",
+  "name": "味噌汁",
+  "category": "汁物",
+  "kcal": 27,
+  "protein": 1.9,
+  "fat": 0.9,
+  "carbs": 3,
+  "fiber": 0.5,
+  "salt": 1.2,
+  "defaultGrams": 160,
+  "aliases": [
+   "みそ汁"
+  ]
+ },
+ {
+  "id": "tonjiru",
+  "name": "豚汁",
+  "category": "汁物",
+  "kcal": 55,
+  "protein": 3.4,
+  "fat": 2.9,
+  "carbs": 4.2,
+  "fiber": 0.8,
+  "salt": 1.1,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "corn-soup",
+  "name": "コーンスープ",
+  "category": "汁物",
+  "kcal": 60,
+  "protein": 1.8,
+  "fat": 2,
+  "carbs": 9,
+  "fiber": 0.5,
+  "salt": 0.8,
+  "defaultGrams": 180,
+  "aliases": []
+ },
+ {
+  "id": "consomme-soup",
+  "name": "コンソメスープ",
+  "category": "汁物",
+  "kcal": 18,
+  "protein": 0.9,
+  "fat": 0.3,
+  "carbs": 3,
+  "fiber": 0.3,
+  "salt": 1.2,
+  "defaultGrams": 180,
+  "aliases": []
+ },
+ {
+  "id": "ramen-full",
+  "name": "ラーメン（一杯）",
+  "category": "汁物",
+  "kcal": 148,
+  "protein": 6.2,
+  "fat": 5.8,
+  "carbs": 17.5,
+  "fiber": 0.9,
+  "salt": 2.2,
+  "defaultGrams": 600,
+  "aliases": [
+   "らーめん"
+  ]
+ },
+ {
+  "id": "salad-bowl",
+  "name": "グリーンサラダ",
+  "category": "汁物",
+  "kcal": 25,
+  "protein": 1.1,
+  "fat": 0.7,
+  "carbs": 3.8,
+  "fiber": 1.6,
+  "salt": 0.4,
+  "defaultGrams": 120,
+  "aliases": [
+   "サラダ"
+  ]
+ },
+ {
+  "id": "banana",
+  "name": "バナナ",
+  "category": "果物",
+  "kcal": 93,
+  "protein": 1.1,
+  "fat": 0.2,
+  "carbs": 22.5,
+  "fiber": 1.1,
+  "salt": 0,
+  "defaultGrams": 120,
+  "aliases": []
+ },
+ {
+  "id": "apple",
+  "name": "りんご",
+  "category": "果物",
+  "kcal": 53,
+  "protein": 0.2,
+  "fat": 0.3,
+  "carbs": 14.6,
+  "fiber": 1.4,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": [
+   "リンゴ",
+   "アップル"
+  ]
+ },
+ {
+  "id": "mikan",
+  "name": "みかん",
+  "category": "果物",
+  "kcal": 49,
+  "protein": 0.9,
+  "fat": 0.1,
+  "carbs": 12,
+  "fiber": 0.5,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "ミカン"
+  ]
+ },
+ {
+  "id": "strawberry",
+  "name": "いちご",
+  "category": "果物",
+  "kcal": 31,
+  "protein": 0.9,
+  "fat": 0.1,
+  "carbs": 8.5,
+  "fiber": 1.4,
+  "salt": 0,
+  "defaultGrams": 100,
+  "aliases": [
+   "イチゴ"
+  ]
+ },
+ {
+  "id": "grapes",
+  "name": "ぶどう",
+  "category": "果物",
+  "kcal": 65,
+  "protein": 0.6,
+  "fat": 0.1,
+  "carbs": 17,
+  "fiber": 0.5,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": [
+   "ブドウ"
+  ]
+ },
+ {
+  "id": "peach",
+  "name": "もも",
+  "category": "果物",
+  "kcal": 38,
+  "protein": 0.7,
+  "fat": 0.1,
+  "carbs": 10.2,
+  "fiber": 1.3,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": [
+   "モモ"
+  ]
+ },
+ {
+  "id": "melon",
+  "name": "メロン",
+  "category": "果物",
+  "kcal": 40,
+  "protein": 1,
+  "fat": 0.2,
+  "carbs": 10.3,
+  "fiber": 0.6,
+  "salt": 0,
+  "defaultGrams": 150,
+  "aliases": []
+ },
+ {
+  "id": "kiwi",
+  "name": "キウイ",
+  "category": "果物",
+  "kcal": 51,
+  "protein": 1,
+  "fat": 0.1,
+  "carbs": 13.4,
+  "fiber": 2.6,
+  "salt": 0,
+  "defaultGrams": 80,
+  "aliases": []
+ },
+ {
+  "id": "orange-juice",
+  "name": "オレンジジュース",
+  "category": "飲料",
+  "kcal": 42,
+  "protein": 0.7,
+  "fat": 0.1,
+  "carbs": 10.4,
+  "fiber": 0.2,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": [
+   "ジュース"
+  ]
+ },
+ {
+  "id": "green-tea",
+  "name": "緑茶",
+  "category": "飲料",
+  "kcal": 1,
+  "protein": 0.2,
+  "fat": 0,
+  "carbs": 0.1,
+  "fiber": 0,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": [
+   "お茶"
+  ]
+ },
+ {
+  "id": "coffee-black",
+  "name": "コーヒー（無糖）",
+  "category": "飲料",
+  "kcal": 4,
+  "protein": 0.2,
+  "fat": 0,
+  "carbs": 0.7,
+  "fiber": 0,
+  "salt": 0,
+  "defaultGrams": 200,
+  "aliases": [
+   "珈琲"
+  ]
+ },
+ {
+  "id": "cafe-latte",
+  "name": "カフェラテ（無糖）",
+  "category": "飲料",
+  "kcal": 38,
+  "protein": 1.9,
+  "fat": 2.2,
+  "carbs": 3,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 250,
+  "aliases": [
+   "ラテ"
+  ]
+ },
+ {
+  "id": "cola",
+  "name": "コーラ",
+  "category": "飲料",
+  "kcal": 46,
+  "protein": 0,
+  "fat": 0,
+  "carbs": 11.4,
+  "fiber": 0,
+  "salt": 0,
+  "defaultGrams": 350,
+  "aliases": []
+ },
+ {
+  "id": "beer",
+  "name": "ビール",
+  "category": "飲料",
+  "kcal": 40,
+  "protein": 0.3,
+  "fat": 0,
+  "carbs": 3.1,
+  "fiber": 0,
+  "salt": 0,
+  "defaultGrams": 350,
+  "aliases": [
+   "麦酒"
+  ]
+ },
+ {
+  "id": "protein-shake",
+  "name": "プロテイン（水割り）",
+  "category": "飲料",
+  "kcal": 75,
+  "protein": 15,
+  "fat": 1,
+  "carbs": 3,
+  "fiber": 0,
+  "salt": 0.3,
+  "defaultGrams": 250,
+  "aliases": []
+ },
+ {
+  "id": "water",
+  "name": "水",
+  "category": "飲料",
+  "kcal": 0,
+  "protein": 0,
+  "fat": 0,
+  "carbs": 0,
+  "fiber": 0,
+  "salt": 0,
+  "defaultGrams": 250,
+  "aliases": []
+ },
+ {
+  "id": "chocolate",
+  "name": "チョコレート",
+  "category": "菓子",
+  "kcal": 550,
+  "protein": 6.9,
+  "fat": 36,
+  "carbs": 51,
+  "fiber": 3.9,
+  "salt": 0,
+  "defaultGrams": 50,
+  "aliases": [
+   "チョコ"
+  ]
+ },
+ {
+  "id": "potato-chips",
+  "name": "ポテトチップス",
+  "category": "菓子",
+  "kcal": 539,
+  "protein": 4.7,
+  "fat": 35.4,
+  "carbs": 50,
+  "fiber": 2.9,
+  "salt": 0.9,
+  "defaultGrams": 60,
+  "aliases": [
+   "チップス"
+  ]
+ },
+ {
+  "id": "ice-cream",
+  "name": "アイスクリーム",
+  "category": "菓子",
+  "kcal": 170,
+  "protein": 3,
+  "fat": 7.5,
+  "carbs": 23,
+  "fiber": 0.1,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": [
+   "アイス"
+  ]
+ },
+ {
+  "id": "pudding",
+  "name": "プリン",
+  "category": "菓子",
+  "kcal": 117,
+  "protein": 4.6,
+  "fat": 4.3,
+  "carbs": 15,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 100,
+  "aliases": []
+ },
+ {
+  "id": "shortcake",
+  "name": "ショートケーキ",
+  "category": "菓子",
+  "kcal": 308,
+  "protein": 4.6,
+  "fat": 15,
+  "carbs": 38,
+  "fiber": 0.6,
+  "salt": 0.2,
+  "defaultGrams": 110,
+  "aliases": [
+   "ケーキ"
+  ]
+ },
+ {
+  "id": "donut",
+  "name": "ドーナツ",
+  "category": "菓子",
+  "kcal": 375,
+  "protein": 5.2,
+  "fat": 20,
+  "carbs": 44,
+  "fiber": 1.3,
+  "salt": 0.7,
+  "defaultGrams": 70,
+  "aliases": []
+ },
+ {
+  "id": "cookie",
+  "name": "クッキー",
+  "category": "菓子",
+  "kcal": 502,
+  "protein": 6.1,
+  "fat": 26,
+  "carbs": 61,
+  "fiber": 1.7,
+  "salt": 0.6,
+  "defaultGrams": 40,
+  "aliases": []
+ },
+ {
+  "id": "yogurt-drink",
+  "name": "飲むヨーグルト",
+  "category": "菓子",
+  "kcal": 63,
+  "protein": 2.9,
+  "fat": 0.5,
+  "carbs": 12,
+  "fiber": 0,
+  "salt": 0.1,
+  "defaultGrams": 200,
+  "aliases": []
+ },
+ {
+  "id": "jelly-drink",
+  "name": "ゼリー飲料",
+  "category": "菓子",
+  "kcal": 32,
+  "protein": 0.5,
+  "fat": 0,
+  "carbs": 8,
+  "fiber": 0.3,
+  "salt": 0.2,
+  "defaultGrams": 180,
+  "aliases": []
+ },
+ {
+  "id": "almond",
+  "name": "アーモンド",
+  "category": "菓子",
+  "kcal": 609,
+  "protein": 18.6,
+  "fat": 51.8,
+  "carbs": 19.9,
+  "fiber": 10.1,
+  "salt": 0,
+  "defaultGrams": 25,
+  "aliases": [
+   "ナッツ"
+  ]
+ },
+ {
+  "id": "salad-dressing",
+  "name": "ドレッシング（和風）",
+  "category": "その他",
+  "kcal": 90,
+  "protein": 0.8,
+  "fat": 6,
+  "carbs": 8,
+  "fiber": 0.2,
+  "salt": 3.2,
+  "defaultGrams": 15,
+  "aliases": []
+ },
+ {
+  "id": "mayonnaise",
+  "name": "マヨネーズ",
+  "category": "その他",
+  "kcal": 668,
+  "protein": 1.6,
+  "fat": 72,
+  "carbs": 3.7,
+  "fiber": 0,
+  "salt": 1.8,
+  "defaultGrams": 15,
+  "aliases": [
+   "マヨ"
+  ]
+ },
+ {
+  "id": "soy-sauce-note",
+  "name": "しょうゆ（参考）",
+  "category": "その他",
+  "kcal": 71,
+  "protein": 7.7,
+  "fat": 0,
+  "carbs": 10.1,
+  "fiber": 0,
+  "salt": 14.5,
+  "defaultGrams": 5,
+  "aliases": [
+   "醤油"
+  ]
+ }
+]

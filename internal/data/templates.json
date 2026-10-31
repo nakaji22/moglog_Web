@@ -1,0 +1,438 @@
+[
+ {
+  "id": "karaage-teishoku",
+  "title": "唐揚げ定食",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "唐揚げ",
+   "定食"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 250
+   },
+   {
+    "foodId": "karaage",
+    "grams": 150
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 180
+   },
+   {
+    "foodId": "cabbage",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "salmon-teishoku",
+  "title": "鮭の塩焼き定食",
+  "mealTypes": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "鮭",
+   "定食",
+   "魚"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 200
+   },
+   {
+    "foodId": "salmon",
+    "grams": 80
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   },
+   {
+    "foodId": "tofu-silk",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "curry-rice",
+  "title": "カレーライス",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "カレー"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 250
+   },
+   {
+    "foodId": "curry-roux",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "ramen-set",
+  "title": "ラーメン",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "ラーメン",
+   "麺"
+  ],
+  "items": [
+   {
+    "foodId": "ramen-full",
+    "grams": 600
+   }
+  ]
+ },
+ {
+  "id": "oyako-don-note",
+  "title": "親子丼風（卵と鶏肉の丼）",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "丼",
+   "卵"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 250
+   },
+   {
+    "foodId": "chicken-thigh",
+    "grams": 80
+   },
+   {
+    "foodId": "egg",
+    "grams": 100
+   },
+   {
+    "foodId": "onion",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "hamburg-set",
+  "title": "ハンバーグ定食",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "ハンバーグ",
+   "定食"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 200
+   },
+   {
+    "foodId": "hamburg",
+    "grams": 120
+   },
+   {
+    "foodId": "salad-bowl",
+    "grams": 100
+   },
+   {
+    "foodId": "corn-soup",
+    "grams": 180
+   }
+  ]
+ },
+ {
+  "id": "shogayaki-set",
+  "title": "生姜焼き定食",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "生姜焼き",
+   "定食"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 220
+   },
+   {
+    "foodId": "shogayaki",
+    "grams": 130
+   },
+   {
+    "foodId": "cabbage",
+    "grams": 60
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "tonkatsu-set",
+  "title": "とんかつ定食",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "とんかつ",
+   "定食"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 220
+   },
+   {
+    "foodId": "tonkatsu",
+    "grams": 120
+   },
+   {
+    "foodId": "cabbage",
+    "grams": 60
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "japanese-breakfast",
+  "title": "和朝食（納豆・卵・ご飯）",
+  "mealTypes": [
+   "breakfast"
+  ],
+  "keywords": [
+   "朝食",
+   "納豆"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 150
+   },
+   {
+    "foodId": "natto",
+    "grams": 45
+   },
+   {
+    "foodId": "egg",
+    "grams": 50
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "toast-breakfast",
+  "title": "トースト朝食",
+  "mealTypes": [
+   "breakfast"
+  ],
+  "keywords": [
+   "朝食",
+   "パン"
+  ],
+  "items": [
+   {
+    "foodId": "bread",
+    "grams": 60
+   },
+   {
+    "foodId": "egg",
+    "grams": 50
+   },
+   {
+    "foodId": "ham",
+    "grams": 20
+   },
+   {
+    "foodId": "cafe-latte",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "salad-chicken-set",
+  "title": "サラダチキンとサラダ",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "サラダ",
+   "チキン",
+   "ダイエット"
+  ],
+  "items": [
+   {
+    "foodId": "salad-chicken",
+    "grams": 110
+   },
+   {
+    "foodId": "salad-bowl",
+    "grams": 150
+   },
+   {
+    "foodId": "broccoli",
+    "grams": 60
+   }
+  ]
+ },
+ {
+  "id": "sushi-set",
+  "title": "寿司の盛り合わせ",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "寿司"
+  ],
+  "items": [
+   {
+    "foodId": "sushi-set",
+    "grams": 300
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "gyoza-set",
+  "title": "餃子定食",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "餃子",
+   "定食"
+  ],
+  "items": [
+   {
+    "foodId": "rice",
+    "grams": 200
+   },
+   {
+    "foodId": "gyoza",
+    "grams": 120
+   },
+   {
+    "foodId": "miso-soup",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "udon-set",
+  "title": "うどん",
+  "mealTypes": [
+   "lunch",
+   "dinner"
+  ],
+  "keywords": [
+   "うどん",
+   "麺"
+  ],
+  "items": [
+   {
+    "foodId": "udon",
+    "grams": 250
+   },
+   {
+    "foodId": "egg",
+    "grams": 50
+   },
+   {
+    "foodId": "spinach",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "sandwich-snack",
+  "title": "サンドイッチ",
+  "mealTypes": [
+   "breakfast",
+   "lunch",
+   "snack"
+  ],
+  "keywords": [
+   "サンド",
+   "パン"
+  ],
+  "items": [
+   {
+    "foodId": "bread",
+    "grams": 90
+   },
+   {
+    "foodId": "ham",
+    "grams": 30
+   },
+   {
+    "foodId": "cheese",
+    "grams": 20
+   },
+   {
+    "foodId": "lettuce",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "fruit-yogurt",
+  "title": "ヨーグルトと果物",
+  "mealTypes": [
+   "breakfast",
+   "snack"
+  ],
+  "keywords": [
+   "ヨーグルト",
+   "フルーツ"
+  ],
+  "items": [
+   {
+    "foodId": "yogurt",
+    "grams": 120
+   },
+   {
+    "foodId": "banana",
+    "grams": 100
+   },
+   {
+    "foodId": "strawberry",
+    "grams": 50
+   }
+  ]
+ }
+]
